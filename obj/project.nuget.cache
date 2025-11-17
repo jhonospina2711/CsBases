@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Na+g7utcf2A=",
+  "dgSpecHash": "1qiYY3jQalU=",
   "success": true,
   "projectFilePath": "C:\\Users\\tamac\\Documents\\1.Desarrollo\\DevTalles\\CursoScharp\\CsBases\\CsBases.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\tamac\\.nuget\\packages\\betterconsoletables\\1.1.3\\betterconsoletables.1.1.3.nupkg.sha512"
+  ],
   "logs": []
 }
