@@ -1,9 +1,10 @@
 ﻿using static System.Console;
 using CsBases.Fundamentals;
+using System.Threading.Tasks;
 
 class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         var laptop = new Product("Laptop", 1200);
         //WriteLine(laptop.GetDescription());
@@ -18,12 +19,14 @@ class Program
         var mananger = new ProductMananger(labelService);
         var monitor = new Product("Monitor 4K", 100);
         var installacion = new ServiceProduct("Instalación Monitor", 20, 30);
-        mananger.PrintLabel(monitor);
-        mananger.PrintLabel(installacion);
+        // mananger.PrintLabel(monitor);
+        // mananger.PrintLabel(installacion);
         // Ejemplo usando FancyLabelService
         ILabelService fancyLabelService = new FancyLabelService();
         var fancyMananger = new ProductMananger(fancyLabelService);
-        fancyMananger.PrintLabel(monitor);
-        fancyMananger.PrintLabel(installacion);
+        // fancyMananger.PrintLabel(monitor);
+        // fancyMananger.PrintLabel(installacion);
+        var firstProduct = await new ProductRepository().GetProduct(1);
+        WriteLine($"{firstProduct.Name} - {firstProduct.Price:C}");
     }
 }
